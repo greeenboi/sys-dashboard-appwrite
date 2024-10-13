@@ -1,0 +1,9 @@
+node_modules
+target
+
+# Added by cargo
+
+/target
+.idea
+cmake-build-debug
+venv
