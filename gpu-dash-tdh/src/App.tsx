@@ -13,6 +13,7 @@ import { id, tx } from '@instantdb/react';
 import { AreaChartInteravtive } from './components/ui/interactive-area-chart';
 import DiskStatsChart from './components/disk-dash';
 import PowerShellTerminal from './components/terminal';
+import SSHTerminal from './components/ssh';
 
 function App() {
   const [systemInfo, setSystemInfo] = useState<SystemInfoData | null>(null);
@@ -167,6 +168,7 @@ useEffect(() => {
           <TabsTrigger value="CpuInfo">CPU Info</TabsTrigger>
           <TabsTrigger value="DiskInfo">Disk Info</TabsTrigger>
           <TabsTrigger value="terminal">Terminal</TabsTrigger>
+          <TabsTrigger value="ssh">ssh</TabsTrigger>
         </TabsList>
         <TabsContent value="General" className='grid grid-cols-3'><AreaChartInteravtive /></TabsContent>
         <TabsContent value="SystemInfo"><SystemInfo systemInfo={systemInfo} /></TabsContent>
@@ -174,6 +176,7 @@ useEffect(() => {
         <TabsContent value="CpuInfo"><CPUStatsChart stats={stats} /></TabsContent>
         <TabsContent value="DiskInfo"><DiskStatsChart stats={stats} /></TabsContent>
         <TabsContent value="terminal"><PowerShellTerminal /></TabsContent>
+        <TabsContent value="ssh"><SSHTerminal /></TabsContent>
       </Tabs>
     </main>
   );

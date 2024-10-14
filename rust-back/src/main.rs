@@ -1,4 +1,4 @@
-// mod terminal;
+mod ssh;
 
 use std::process::{Command, Stdio};
 use std::sync::{Arc, Mutex};
@@ -7,7 +7,7 @@ use actix_cors::Cors;
 use actix_web::{get, post, web, App, HttpResponse, HttpServer, Responder};
 use env_logger::Env;
 use serde::{Serialize, Deserialize};
-use sysinfo:: System;
+use sysinfo::System;
 use tokio::io::{AsyncBufReadExt, AsyncWriteExt, BufReader};
 use tokio::sync::mpsc;
 use tokio::process::Command as TokioCommand;
@@ -51,8 +51,7 @@ async fn main() -> Result<(), std::io::Error> {
             .app_data(web::Data::new(data.clone()))
             .service(get_gpu_stats)
             .service(get_system_info)
-            // .service(execute_powershell)
-            // .service(stream_powershell)
+            .service(web::resource("/ws").route(web::get().to(ssh::ssh_connect)))
     })
     .bind("127.0.0.1:8080")?
     .run()
