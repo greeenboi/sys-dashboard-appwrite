@@ -21,7 +21,7 @@ dependencies = [
  "parking_lot 0.12.3",
  "pin-project-lite 0.2.14",
  "smallvec",
- "tokio 1.40.0",
+ "tokio 1.42.0",
  "tokio-util 0.7.12",
 ]
 
@@ -53,7 +53,7 @@ dependencies = [
  "futures-sink",
  "memchr",
  "pin-project-lite 0.2.14",
- "tokio 1.40.0",
+ "tokio 1.42.0",
  "tokio-util 0.7.12",
  "tracing",
 ]
@@ -106,7 +106,7 @@ dependencies = [
  "rand",
  "sha1",
  "smallvec",
- "tokio 1.40.0",
+ "tokio 1.42.0",
  "tokio-util 0.7.12",
  "tracing",
  "zstd",
@@ -170,7 +170,7 @@ checksum = "24eda4e2a6e042aa4e55ac438a2ae052d3b5da0ecf83d7411e1a368946925208"
 dependencies = [
  "actix-macros 0.2.4",
  "futures-core",
- "tokio 1.40.0",
+ "tokio 1.42.0",
 ]
 
 [[package]]
@@ -186,7 +186,7 @@ dependencies = [
  "futures-util",
  "mio 1.0.2",
  "socket2",
- "tokio 1.40.0",
+ "tokio 1.42.0",
  "tracing",
 ]
 
@@ -312,7 +312,7 @@ dependencies = [
  "bytestring",
  "futures-core",
  "pin-project-lite 0.2.14",
- "tokio 1.40.0",
+ "tokio 1.42.0",
  "tokio-util 0.7.12",
 ]
 
@@ -893,7 +893,7 @@ dependencies = [
  "serde",
  "serde_json",
  "sysinfo",
- "tokio 1.40.0",
+ "tokio 1.42.0",
  "tokio-stream",
  "winapi 0.3.9",
  "windows-sys 0.36.1",
@@ -913,7 +913,7 @@ dependencies = [
  "http",
  "indexmap",
  "slab",
- "tokio 1.40.0",
+ "tokio 1.42.0",
  "tokio-util 0.7.12",
  "tracing",
 ]
@@ -1692,9 +1692,9 @@ dependencies = [
 
 [[package]]
 name = "tokio"
-version = "1.40.0"
+version = "1.42.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "e2b070231665d27ad9ec9b8df639893f46727666c6767db40317fbe920a5d998"
+checksum = "5cec9b21b0450273377fc97bd4c33a8acffc8c996c987a7c5b319a0083707551"
 dependencies = [
  "backtrace",
  "bytes 1.7.1",
@@ -1727,7 +1727,7 @@ checksum = "4f4e6ce100d0eb49a2734f8c0812bcd324cf357d21810932c5df6b96ef2b86f1"
 dependencies = [
  "futures-core",
  "pin-project-lite 0.2.14",
- "tokio 1.40.0",
+ "tokio 1.42.0",
 ]
 
 [[package]]
@@ -1754,7 +1754,7 @@ dependencies = [
  "futures-core",
  "futures-sink",
  "pin-project-lite 0.2.14",
- "tokio 1.40.0",
+ "tokio 1.42.0",
 ]
 
 [[package]]
